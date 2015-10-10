@@ -1,0 +1,35 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "emitDecoratorMetadata": true,
+        "module": "commonjs",
+        "target": "es5",
+        "outDir": "dist",
+        "rootDir": "src"
+    },
+    "filesGlob": [
+        "./**/*.ts",
+        "!./node_modules/**/*.ts",
+        "!./dist/**/*.ts"
+    ],
+    "files": [
+        "src/client/app/app.component.ts",
+        "src/client/content/about/about.component.ts",
+        "src/client/content/home/home.component.ts",
+        "src/client/layout/aside/aside.component.ts",
+        "src/client/layout/body/body.component.ts",
+        "src/client/layout/footer/footer.component.ts",
+        "src/client/layout/header/header.component.ts",
+        "src/client/layout/nav/nav.component.ts",
+        "src/client/layout/nav/nav.service.ts",
+        "src/server/server.ts",
+        "typings/browser-sync/browser-sync.d.ts",
+        "typings/chokidar/chokidar.d.ts",
+        "typings/express/express.d.ts",
+        "typings/mime/mime.d.ts",
+        "typings/node/node.d.ts",
+        "typings/serve-static/serve-static.d.ts",
+        "typings/tsd.d.ts"
+    ],
+    "exclude": []
+}
