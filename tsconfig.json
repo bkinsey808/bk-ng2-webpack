@@ -16,6 +16,7 @@
         "src/client/app/app.component.ts",
         "src/client/content/about/about.component.ts",
         "src/client/content/home/home.component.ts",
+        "src/client/content/not-found/not-found.component.ts",
         "src/client/layout/aside/aside.component.ts",
         "src/client/layout/body/body.component.ts",
         "src/client/layout/footer/footer.component.ts",
