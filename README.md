@@ -24,10 +24,14 @@ WIP
 WIP
 
 ## Hack the code
-1. run `gulp`
 
-Alternatively, for Linux based operating systems you can run `./scripts/dev.sh`
+WIP
+
+There might be other strategies which will be better than this double watch system.
+I'm open to other ideas.
+
+Here is how this project is currently set up:
+1. run `gulp` (which watches for ts file changes, and transpiles them)
+2. run `webpack --progress --colors --watch` which allows webpack to monitor the transpiled js.
 
 The live reloading server is listening at `http://localhost:3001`
-
-Alternatively, for Linux based operating systems you can run `./scripts/dev_server.sh`

@@ -2,15 +2,13 @@
 /// <reference path="../../../node_modules/angular2/bundles/typings/angular2/router.d.ts" />
 /// <reference path="../../../node_modules/angular2/bundles/typings/angular2/http.d.ts" />
 
-import { bind, Component, bootstrap } from 'angular2/angular2';
 import { HTTP_BINDINGS } from 'angular2/http';
+import { bind, Component, bootstrap } from 'angular2/angular2';
+/*import { routerBindings, LocationStrategy, HashLocationStrategy} from 'angular2/router';
+import { ROUTER_DIRECTIVES, RouteConfig, Router, Location, Route} from 'angular2/router';
+*/
+import { RouteConfig, ROUTER_BINDINGS, LocationStrategy, HashLocationStrategy, ROUTER_PRIMARY_COMPONENT} from 'angular2/router';
 
-import {
-  ROUTER_DIRECTIVES,
-  ROUTER_BINDINGS,
-  ROUTER_PRIMARY_COMPONENT,
-  RouteConfig
-} from 'angular2/router';
 import { HeaderComponent } from '../layout/header/header.component';
 import { NavComponent    } from '../layout/nav/nav.component';
 import { AsideComponent  } from '../layout/aside/aside.component';
@@ -32,8 +30,8 @@ import { AboutComponent  } from '../content/about/about.component';
 })
 @RouteConfig([
   //      URL           state               class
-  { path: '/',      as: 'home',  component: HomeComponent },
-  { path: '/about', as: 'about', component: AboutComponent }
+  { path: '/',      as: 'Home',  component: HomeComponent },
+  { path: '/about', as: 'About', component: AboutComponent }
 ])
 class AppComponent {
   name: string;
@@ -45,6 +43,7 @@ class AppComponent {
 
 // How do I do html5mode without hash urls?
 bootstrap(AppComponent, [
-  ROUTER_BINDINGS,
-  bind(ROUTER_PRIMARY_COMPONENT).toValue(AppComponent)
+	ROUTER_BINDINGS,
+	bind(LocationStrategy).toClass(HashLocationStrategy),
+	bind(ROUTER_PRIMARY_COMPONENT).toValue(AppComponent)
 ]);
