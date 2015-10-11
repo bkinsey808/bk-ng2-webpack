@@ -6,6 +6,11 @@ This is a simple demo how to setup a project that uses TypeScript, Express 4, An
 
 For server side live reloading, this project requires [nodemon](https://github.com/remy/nodemon)
 
+## Angular2 Version
+This project currently uses Angular2 Alpha 40.
+
+All angular2 projects ought to clearly label their angular 2 alpha version. Thank you.
+
 ## Installation
 1. Clone this repository
 2. cd into the directory
@@ -31,6 +36,7 @@ There might be other strategies which will be better than this double watch syst
 I'm open to other ideas.
 
 Here is how this project is currently set up:
+
 1. run `gulp` (which watches for ts file changes, and transpiles them)
 2. run `webpack --progress --colors --watch` which allows webpack to monitor the transpiled js.
 
